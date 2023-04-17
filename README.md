@@ -1,4 +1,4 @@
-# [Demo link🔗](https://react-itsolutions21.netlify.app)
+# [Demo link🔗](https://it-solutions21.netlify.app)
 
 ## How to use
 
