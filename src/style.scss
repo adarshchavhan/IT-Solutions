@@ -1,0 +1,77 @@
+
+
+// VARIABLES
+$primary-color: #00DA71;
+$text-color: #4A5B53;
+$white-color: #fff;
+$black-color: #000;
+$gray-color: gray;
+$shadow-color: rgba(0,0,0,.1);
+
+$open-sans: 'Open Sans', sans-serif;
+
+// MIXINS
+@mixin container($arg1){
+    margin: auto;
+    width: calc(100% - 20px);
+    max-width: $arg1;
+    height: inherit;
+}
+
+@mixin md{
+    @media (max-width: 998px) {
+        @content;
+    }
+}
+
+@mixin sm{
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin xs{
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+// BASIC CSS
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 14px;
+    font-family: $open-sans;
+    color: $text-color;
+    scroll-behavior: smooth
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: $primary-color;
+    border-radius: 10px;
+}
+.container{
+    @include container(1200px);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+

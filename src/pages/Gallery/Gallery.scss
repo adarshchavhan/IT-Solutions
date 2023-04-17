@@ -1,0 +1,45 @@
+@import '../../style.scss';
+
+.gallery-page{
+    .heading{
+        height: 150px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: $primary-color;
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            filter:brightness(.7) blur(5px);
+            top: 0;
+            display: none;
+        }
+        h1{
+            position: absolute;
+            color: $white-color;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+    }
+
+    .container{
+        padding: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        a{
+            width: calc(100% / 3 - 35px);
+            height: 250px;
+            box-shadow: 0 20px 20px $shadow-color;
+            img{
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }
+}

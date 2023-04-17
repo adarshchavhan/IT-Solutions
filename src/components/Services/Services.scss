@@ -1,0 +1,91 @@
+@import '../../style.scss';
+
+.services{
+    padding: 30px 0;
+    h2{
+        font-size: 28px;
+        text-align: center;
+        @include xs{
+            font-size: 22px;       
+           }
+    }
+    .container{
+        padding: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        
+        @include xs{
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service{
+            padding: 10px;
+            width: calc(100% / 3 - 20px);
+            border: 1px solid $shadow-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 10px;
+            &:hover, &:focus{
+                box-shadow: 0 0 10px $shadow-color;
+            }
+            @include sm{
+                width: calc(100% / 2 - 15px);       
+               }
+
+               @include xs{
+                min-width: 200px;
+                width: calc(100% / 2 - 10px);
+               }
+            img{
+                width: 100px;
+                opacity: .5;
+                @include xs{
+                       width: 80px; 
+                }
+            }
+            .text{
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h3{
+                    font-family: 'inter';
+                    font-size: 18px;
+                    font-weight: 600;
+                    @include xs{
+                       font-size: 14px; 
+                    }
+                }
+                p{
+                    color: $gray-color;
+                    @include xs{
+                     font-size: 12px;   
+                    }
+                }
+                .btn-wrapper{
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 10px;
+                    .btn{
+                        color: $gray-color;
+                        border-radius: 10px;
+                        padding: 7px 21px;
+                        border: 1px solid $shadow-color;
+                        &:hover{
+                            color: $primary-color;
+                        }
+                        @include xs{
+                        font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
